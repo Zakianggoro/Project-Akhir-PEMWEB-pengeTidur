@@ -43,17 +43,46 @@ body {
 .wallet-container {
     width: 90%;
     max-width: 800px;
-    height: 150px;
+    height: auto;
     margin: 0 auto;
     background-color: green;
     border-radius: 8px;
-}
-
-.container {
+    padding: 20px;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+}
+
+.wallet-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.wallet-left h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.wallet-left p {
+    margin: 4px 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.wallet-icon {
+    font-size: 2rem;
+}
+
+.transfer-button {
+    background-color: #ffffff;
+    color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .history-section {
