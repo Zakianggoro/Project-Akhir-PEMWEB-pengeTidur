@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" href="loginS.css">
+    <title>Sign Up</title>
+    @vite('resources/css/signupS.css')
 </head>
 <body>
 
     <div class = "logo"> Tes </div>
 
     <div class="container">
-        <h2>Login</h2>
+        <h2>Sign up</h2>
         <p>Hi there,</p>
         
         <form>
+            <label for="gmail">Gmail</label>
+            <input type="text" id="gmail" placeholder="Type here" required>
+
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="Type here" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Type here" required>
 
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" placeholder="Type here" required>
+
             <button type="submit">Sign up</button>
         </form>
         
         <div class="footer">
             <p>Already have an account?</p>
-            <a href="home.html">Login</a>
+            <a href="login.html">Login</a>
         </div>
     </div>
 
