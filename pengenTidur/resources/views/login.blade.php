@@ -14,12 +14,14 @@
         <h2>Login</h2>
         <p>Hi there,</p>
         
-        <form>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Type here" required>
+            <input type="text" name="name" id="username" placeholder="Type here" required>
 
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Type here" required>
+            <input type="password" name="password" id="password" placeholder="Type here" required>
 
             <button type="submit">Sign up</button>
         </form>

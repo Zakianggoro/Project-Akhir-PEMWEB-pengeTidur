@@ -1,9 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\loginController;
+use App\http\Controllers\AuthenticationController;
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/',[AuthenticationController::class,'showloginform']);
+Route::post('/',[AuthenticationController::class,'login'])->name('login');
+Route::get('/signup',[AuthenticationController::class,'showsignupform']);
+Route::post('/signup',[AuthenticationController::class,'signup'])->name('signup');
+Route::get('/wallet', function () {
+    return view('wallet');
 });
-Route::get('/',[loginController::class,'index']);
+Route::middleware(['auth'])->group(function(){
+    
+});

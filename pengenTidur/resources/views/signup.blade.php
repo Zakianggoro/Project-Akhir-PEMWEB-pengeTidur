@@ -14,18 +14,20 @@
         <h2>Sign up</h2>
         <p>Hi there,</p>
         
-        <form>
+        <form method="POST" action="{{ route('signup') }}">
+            @csrf
+
             <label for="gmail">Gmail</label>
-            <input type="text" id="gmail" placeholder="Type here" required>
+            <input type="text" name="email" id="gmail" placeholder="Type here" required>
 
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Type here" required>
+            <input type="text" name="name" id="username" placeholder="Type here" required>
 
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Type here" required>
+            <input type="password" name="password" id="password" placeholder="Type here" required>
 
             <label for="confirm-password">Confirm password</label>
-            <input type="password" id="confirm-password" placeholder="Type here" required>
+            <input type="password" name="password_confirmation"id="confirm-password" placeholder="Type here" required>
 
             <button type="submit">Sign up</button>
         </form>
