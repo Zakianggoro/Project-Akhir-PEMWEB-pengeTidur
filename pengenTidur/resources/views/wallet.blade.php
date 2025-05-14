@@ -12,12 +12,12 @@
     <a href="#" class="logo">Logo</a>
     </div>
     <div class="navbar-right">
-    <a href="#">Menu Item</a>
-    <a href="#">Menu Item</a>
-    <a href="#">Menu Item</a>
-    <a href="#">About Us</a>
-    <a href="#" class="cta">Contact Us</a>
-    <a href="#">Profile</a>
+        <a href="#">Home</a>
+        <a href={{ route('wallet') }}>Wallet</a>
+        <a href={{ route('transfer') }}>Transfer</a>
+        <a href={{ route('trashpedia') }}>Trashpedia</a>
+        <a href="#" class="cta">Recycle</a>
+        <a href={{ route('profile') }}>Profile</a>
     </div>
 </nav>
 

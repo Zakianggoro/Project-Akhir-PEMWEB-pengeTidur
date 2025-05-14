@@ -10,16 +10,19 @@ Route::get('/signup',[AuthenticationController::class,'showsignupform']);
 Route::post('/signup',[AuthenticationController::class,'signup'])->name('signup');
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/wallet', function () {
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');  
+  Route::get('/wallet', function () {
         return view('wallet');
-    });
+    })->name('wallet');
     Route::get('/profile', function () {
         return view('profile');
-    });
+    })->name('profile');
       Route::get('/transfer', function () {
         return view('transfer');
-    });
+    })->name('transfer');;
       Route::get('/trashpedia', function () {
         return view('trashpedia');
-    });       
+    })->name('trashpedia');;   
 });
