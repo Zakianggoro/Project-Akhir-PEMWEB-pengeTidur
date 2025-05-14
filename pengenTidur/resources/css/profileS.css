@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar .cta {
+    background-color: #90ee90;
+    padding: 4px 10px;
+    border-radius: 4px;
+}

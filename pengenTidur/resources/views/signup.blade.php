@@ -34,7 +34,7 @@
         
         <div class="footer">
             <p>Already have an account?</p>
-            <a href="login.html">Login</a>
+            <a href="{{ route('login') }}">Login</a>
         </div>
     </div>
 

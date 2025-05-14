@@ -27,8 +27,8 @@
         </form>
         
         <div class="footer">
-            <p>Already have an account?</p>
-            <a href="home.html">Login</a>
+            <p>Don't have an account?</p>
+            <a href="{{ route('signup') }}">Sign up</a>
         </div>
     </div>
 
