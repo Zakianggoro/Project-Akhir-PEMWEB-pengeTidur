@@ -23,7 +23,7 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Type here" required>
 
-            <button type="submit">Sign up</button>
+            <button type="submit">Login</button>
         </form>
         
         <div class="footer">
