@@ -30,6 +30,9 @@
         <p><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
         </div>
     </div>
+    </div>
+    <button class="transfer-button">Transfer</button>
+    </div>
 </main>
 
 <section class="history-section">

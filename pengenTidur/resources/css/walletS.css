@@ -56,6 +56,16 @@ body {
     padding: 20px;
 }
 
+.transfer-button {
+    background-color: #ffffff;
+    color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .history-section {
     margin: 40px auto;
     width: 90%;
