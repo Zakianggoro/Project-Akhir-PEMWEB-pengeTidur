@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resresources/css/home.css'])
+    @vite(['resources/css/home.css'])
 </head>
 <body>
     <div class="flex min-h-screen bg-gray-100">
@@ -12,10 +12,10 @@
         <div class="navbar">
             <div class="logo">Logo</div>
             <nav>
-                <a href="#" class="active">🏠 Home</a>
-                <a href="#">👛 Wallet</a>
-                <a href="#">🔁 Transfer</a>
-                <a href="#">📖 Trashpedia</a>
+                <a href={{ route('home') }} class="active">🏠 Home</a>
+                <a href={{ route('wallet') }}>👛 Wallet</a>
+                <a href={{ route('transfer') }}>🔁 Transfer</a>
+                <a href={{ route('trashpedia') }}>📖 Trashpedia</a>
                 <a href="#">♻️ Recycle</a>
             </nav>
         </div>
@@ -47,7 +47,7 @@
                 <!-- Wallet Section -->
                 <div class="space-y-4">
                     <div class="card">
-                        <p>Rp 50.000</p>
+                        <p><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
                         <p class="card-title">Saldo Anda</p>
                     </div>
                     <div class="card">

@@ -14,7 +14,7 @@
       <a href="#" class="logo">Logo</a>
     </div>
     <div class="navbar-right">
-        <a href="#">Home</a>
+        <a href={{ route('home') }}>Home</a>
         <a href={{ route('wallet') }}>Wallet</a>
         <a href={{ route('transfer') }}>Transfer</a>
         <a href={{ route('trashpedia') }}>Trashpedia</a>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="info-card">
-      <img src="poster tes.jpg" alt="Banner 1" style="width: 200px; height: 100px; margin: 20px;">
+      <img src="{{ asset('images/poster tes.jpg') }}" alt="Banner 1" style="width: 200px; height: 100px; margin: 20px;">
       <div class="info-text">
         <h3>Heading</h3>
         <p class="subheading">Subheading</p>

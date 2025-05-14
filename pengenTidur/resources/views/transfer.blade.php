@@ -14,7 +14,7 @@
     <a href="#" class="logo">Logo</a>
     </div>
     <div class="navbar-right">
-        <a href="#">Home</a>
+        <a href={{ route('home') }}>Home</a>
         <a href={{ route('wallet') }}>Wallet</a>
         <a href={{ route('transfer') }}>Transfer</a>
         <a href={{ route('trashpedia') }}>Trashpedia</a>
@@ -29,7 +29,7 @@
 <div class="current-balance-label">Saldo saat ini</div>
 <div class="wallet-balance">
     <span class="material-symbols-outlined wallet-icon">account_balance_wallet</span>
-    <span class="balance-amount">Rp 500.000</span>
+    <span class="balance-amount"><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></span>
 </div>
 
 <div class="target-balance-label">Pilih bank untuk transfer</div>

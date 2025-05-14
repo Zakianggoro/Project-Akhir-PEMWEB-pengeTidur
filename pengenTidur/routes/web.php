@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\AuthenticationController;
-
+use App\http\Controllers\TrashpediaController;
+use App\Http\Controllers\WalletController;
+use App\Http\Controllers\TransferController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/',[AuthenticationController::class,'showloginform']);
 Route::post('/',[AuthenticationController::class,'login'])->name('login');
@@ -10,19 +13,12 @@ Route::get('/signup',[AuthenticationController::class,'showsignupform']);
 Route::post('/signup',[AuthenticationController::class,'signup'])->name('signup');
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/home', function () {
-        return view('home');
-    })->name('home');  
-  Route::get('/wallet', function () {
-        return view('wallet');
-    })->name('wallet');
+    Route::get('/home',[HomeController::class,'view'])->name('home');
+    Route::get('/wallet',[WalletController::class,'view'])->name('wallet');
     Route::get('/profile', function () {
         return view('profile');
     })->name('profile');
-      Route::get('/transfer', function () {
-        return view('transfer');
-    })->name('transfer');;
-      Route::get('/trashpedia', function () {
-        return view('trashpedia');
-    })->name('trashpedia');;   
+    Route::get('/transfer',[TransferController::class,'view'])->name('transfer');
+
+    Route::get('/trashpedia',[TrashpediaController::class,'view'])->name('trashpedia');
 });

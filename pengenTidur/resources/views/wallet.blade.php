@@ -12,7 +12,7 @@
     <a href="#" class="logo">Logo</a>
     </div>
     <div class="navbar-right">
-        <a href="#">Home</a>
+        <a href={{ route('home') }}>Home</a>
         <a href={{ route('wallet') }}>Wallet</a>
         <a href={{ route('transfer') }}>Transfer</a>
         <a href={{ route('trashpedia') }}>Trashpedia</a>
@@ -27,7 +27,7 @@
     <div class="wallet-card">
         <div class ="container">
         <h2>Saldo</h2>
-        <p>Rp 1.000.000</p>
+        <p><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
         </div>
     </div>
 </main>
