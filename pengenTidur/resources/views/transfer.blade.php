@@ -29,7 +29,7 @@
 <div class="current-balance-label">Saldo saat ini</div>
 <div class="wallet-balance">
     <span class="material-symbols-outlined wallet-icon">account_balance_wallet</span>
-    <span class="balance-amount">Rp 50.000</span>
+    <span class="balance-amount">Rp 500.000</span>
 </div>
 
 <div class="target-balance-label">Pilih bank untuk transfer</div>
