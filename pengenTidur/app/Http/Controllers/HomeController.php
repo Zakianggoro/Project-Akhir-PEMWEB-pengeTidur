@@ -11,6 +11,6 @@ class HomeController extends Controller
         $user = Auth::user();
         $saldo = $user->saldo;
 
-        return view('home',compact('saldo'));
+        return view('home1',compact('saldo'));
     }
 }
