@@ -33,14 +33,14 @@
                     <span class="material-symbols-outlined text-6xl text-white">account_circle</span>
                 </div>
                 <h2 class="text-xl font-semibold mt-4">User</h2>
-                <p class="text-gray-700">useremail@gmail.com</p>
+                <p class="text-gray-700">{{ $email }}</p>
             </div>
 
             <!-- Statistic Info -->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8">
                 <div class="bg-white rounded-lg p-4 w-full sm:w-1/2 shadow text-center">
-                    <p class="text-sm text-gray-500">Total Raised in 1 Year</p>
-                    <p class="text-xl font-bold text-gray-800">Rp 1.770.130</p>
+                    <p class="text-sm text-gray-500">Total Raised</p>
+                    <p class="text-xl font-bold text-gray-800"><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
                 </div>
                 <div class="bg-white rounded-lg p-4 w-full sm:w-1/2 shadow text-center">
                     <p class="text-sm text-gray-500">Trash Collected</p>

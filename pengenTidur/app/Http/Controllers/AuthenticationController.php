@@ -19,7 +19,7 @@ class AuthenticationController extends Controller
         $credentials = $request->only('name','password');
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('/wallet');
+            return redirect()->intended('/home');
         }
         return back()->withErrors([
             'username' => 'Username atau password salah'
