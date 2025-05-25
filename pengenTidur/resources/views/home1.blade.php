@@ -155,11 +155,11 @@
 
   <div class="container">
     <div class="sidebar">
-      <a class="sidebar-button" href="{{ route('home') }}">🏠<br/>Home</a>
-      <a class="sidebar-button" href="{{ route('wallet') }}">👛<br/>Wallet</a>
-      <a class="sidebar-button" href="{{ route('transfer') }}">🔁<br/>Transfer</a>
-      <a class="sidebar-button" href="{{ route('trashpedia') }}">📄<br/>Trashpedia</a>
-      <a class="sidebar-button" href="#">♻️<br/>Recycle</a>
+      <a class="sidebar-button" href="{{ route('home') }}"><img src="{{ asset('images/home.png') }}"><br/>Home</a>
+      <a class="sidebar-button" href="{{ route('wallet') }}"><img src="{{ asset('images/wallet.png') }}"><br/>Wallet</a>
+      <a class="sidebar-button" href="{{ route('transfer') }}"><img src="{{ asset('images/transfer.png') }}"><br/>Transfer</a>
+      <a class="sidebar-button" href="{{ route('trashpedia') }}"><img src="{{ asset('images/trashpedia.png') }}"><br/>Trashpedia</a>
+      <a class="sidebar-button" href="#"><img src="{{ asset('images/recycle.png') }}"><br/>Recycle</a>
     </div>
 
 <div class="main-content">
@@ -168,19 +168,19 @@
     <h2>Choose your type of trash</h2>
     <div class="trash-options">
       <div class="item">
-        <img src="plastic-bottle-icon.png" width="40" /><br/>
+        <img src="{{ asset('images/botolplastik.png') }}" width="40" /><br/>
         Botol Plastik
       </div>
       <div class="item">
-        <img src="cooking-oil-icon.png" width="40" /><br/>
+        <img src="{{ asset('images/minyakjelantah.png') }}" width="40" /><br/>
         Minyak Jelantah
       </div>
       <div class="item">
-        <img src="glass-bottle-icon.png" width="40" /><br/>
+        <img src="{{ asset('images/botolkaca.png') }}" width="40" /><br/>
         Botol Kaca
       </div>
       <div class="item">
-        <img src="newspaper-icon.png" width="40" /><br/>
+        <img src="{{ asset('images/koran.png') }}" width="40" /><br/>
         Koran Bekas
       </div>
     </div>
@@ -188,18 +188,18 @@
 
   <div class="section">
     <div class="balance"><strong>RP {{ number_format($saldo,2,',','.') }}</strong></div>
-    <img src="poster7.png" alt="Cara Mengolah Sampah Organik"/>
+    <img src="{{ asset('images/poster7.png') }}" alt="Cara Mengolah Sampah Organik"/>
   </div>
 </div>
 
 
   <div class="section">
     <div class="education-cards">
-      <img src="poster1.png" alt="Edukasi 1"/>
-      <img src="poster2.png" alt="Edukasi 2"/>
-      <img src="poster3.png" alt="Edukasi 3"/>
-      <img src="poster4.png" alt="Edukasi 4"/>
-      <img src="poster5.png" alt="Edukasi 5"/>
+      <img src="{{ asset('images/poster1.png') }}" alt="Edukasi 1"/>
+      <img src="{{ asset('images/poster2.png') }}" alt="Edukasi 2"/>
+      <img src="{{ asset('images/poster3.png') }}" alt="Edukasi 3"/>
+      <img src="{{ asset('images/poster4.png') }}" alt="Edukasi 4"/>
+      <img src="{{ asset('images/poster5.png') }}" alt="Edukasi 5"/>
     </div>
   </div>
 </div>
