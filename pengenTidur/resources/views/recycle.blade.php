@@ -246,21 +246,21 @@
       <h3>Pick your trash</h3>
 
       <div class="trash-item">
-        <img src="botolplastik.png" alt="Botol Plastik">
+        <img src="{{ asset('images/botolplastik.png') }}" alt="Botol Plastik">
         <div>Botol Plastik</div>
         <button class="plus">+</button>
         <button class="minus">−</button>
       </div>
 
       <div class="trash-item">
-        <img src="minyakjelantah.png" alt="Minyak Jelatah">
+        <img src="{{ asset('images/minyakjelantah.png') }}" alt="Minyak Jelatah">
         <div>Minyak Jelatah</div>
         <button class="plus">+</button>
         <button class="minus">−</button>
       </div>
 
       <div class="trash-item">
-        <img src="botolkaca.png" alt="Botol Kaca">
+        <img src="{{ asset('images/botolkaca.png') }}" alt="Botol Kaca">
         <div>Botol Kaca</div>
         <button class="plus">+</button>
         <button class="minus">−</button>
