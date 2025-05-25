@@ -114,27 +114,52 @@
     border: 1px solid #ccc;
     margin-right: 100px;
   }
+
+  .sidebar-button {
+  display: block;
+  background: none;
+  border: none;
+  margin: 50px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  width: 120px;
+  text-decoration: none;
+  color: black;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #90ee90;
+  cursor: pointer;
+}
+
 </style>
 
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div><strong>Logo</strong></div>
-    <div>
-      <a href="#">About Us</a>
-      <button style="background-color: #90ee90; border: none; padding: 5px 10px; border-radius: 10px; font-weight: bold;">Contact Us</button>
-    </div>
+<div class="header">
+  <div><strong>Logo</strong></div>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <a href="#">About Us</a>
+    <a href="{{ route('profile') }}">
+      <img src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" alt="Profile" class="profile-image">
+    </a>
   </div>
+</div>
 
   <div class="container">
     <div class="sidebar">
-      <button>🏠<br/>Home</button>
-      <button>👛<br/>Wallet</button>
-      <button>🔁<br/>Transfer</button>
-      <button>📄<br/>Trashpedia</button>
-      <button>♻️<br/>Recycle</button>
+      <a class="sidebar-button" href="{{ route('home') }}">🏠<br/>Home</a>
+      <a class="sidebar-button" href="{{ route('wallet') }}">👛<br/>Wallet</a>
+      <a class="sidebar-button" href="{{ route('transfer') }}">🔁<br/>Transfer</a>
+      <a class="sidebar-button" href="{{ route('trashpedia') }}">📄<br/>Trashpedia</a>
+      <a class="sidebar-button" href="#">♻️<br/>Recycle</a>
     </div>
 
 <div class="main-content">
