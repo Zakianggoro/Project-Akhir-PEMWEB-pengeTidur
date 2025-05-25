@@ -39,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
+    padding-right: 5px;
     border-right: 2px solid #999;
   }
 
@@ -119,11 +120,11 @@
   display: block;
   background: none;
   border: none;
-  margin: 50px 0;
+  margin: 10px 0;
   text-align: center;
   cursor: pointer;
   font-size: 18px;
-  width: 120px;
+  width: 60px;
   text-decoration: none;
   color: black;
 }
@@ -159,7 +160,7 @@
       <a class="sidebar-button" href="{{ route('wallet') }}"><img src="{{ asset('images/wallet.png') }}"><br/>Wallet</a>
       <a class="sidebar-button" href="{{ route('transfer') }}"><img src="{{ asset('images/transfer.png') }}"><br/>Transfer</a>
       <a class="sidebar-button" href="{{ route('trashpedia') }}"><img src="{{ asset('images/trashpedia.png') }}"><br/>Trashpedia</a>
-      <a class="sidebar-button" href="#"><img src="{{ asset('images/recycle.png') }}"><br/>Recycle</a>
+      <a class="sidebar-button" href="{{ route('recycle') }}"><img src="{{ asset('images/recycle.png') }}"><br/>Recycle</a>
     </div>
 
 <div class="main-content">

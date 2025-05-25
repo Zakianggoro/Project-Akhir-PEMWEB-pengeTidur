@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RecycleController;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\AuthenticationController;
 use App\http\Controllers\TrashpediaController;
@@ -18,6 +19,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/wallet',[WalletController::class,'view'])->name('wallet');
     Route::get('/profile',[ProfileController::class,'view'])->name('profile');
     Route::get('/transfer',[TransferController::class,'view'])->name('transfer');
-
+    Route::get('/recycle',[RecycleController::class,'view'])->name('recycle');
     Route::get('/trashpedia',[TrashpediaController::class,'view'])->name('trashpedia');
 });

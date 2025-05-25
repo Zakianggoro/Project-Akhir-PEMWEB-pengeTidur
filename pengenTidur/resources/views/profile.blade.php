@@ -18,7 +18,7 @@
         <a href={{ route('wallet') }}>Wallet</a>
         <a href={{ route('transfer') }}>Transfer</a>
         <a href={{ route('trashpedia') }}>Trashpedia</a>
-        <a href="#" class="cta">Recycle</a>
+        <a href={{ route('recycle') }} class="cta">Recycle</a>
         <a href={{ route('profile') }}>Profile</a>
     </div>
     </nav>
@@ -51,6 +51,7 @@
             <!-- Diagram Placeholder -->
             <div class="bg-white h-60 rounded-lg shadow flex items-center justify-center mb-10">
                 <h3 class="text-2xl font-semibold text-gray-600">Diagram Sampah</h3>
+                <input type="image" src="" alt="">
             </div>
 
             <!-- General Section -->
