@@ -1,0 +1,48 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-B2exd9QJ.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/home.css": {
+    "file": "assets/home-CPmzGBe-.css",
+    "src": "resources/css/home.css",
+    "isEntry": true
+  },
+  "resources/css/loginS.css": {
+    "file": "assets/loginS-DC8-wDwW.css",
+    "src": "resources/css/loginS.css",
+    "isEntry": true
+  },
+  "resources/css/profileS.css": {
+    "file": "assets/profileS-BoWbujUL.css",
+    "src": "resources/css/profileS.css",
+    "isEntry": true
+  },
+  "resources/css/signupS.css": {
+    "file": "assets/loginS-DC8-wDwW.css",
+    "src": "resources/css/loginS.css",
+    "isEntry": true
+  },
+  "resources/css/transferS.css": {
+    "file": "assets/transferS-D_CLqQGc.css",
+    "src": "resources/css/transferS.css",
+    "isEntry": true
+  },
+  "resources/css/trashpediaS.css": {
+    "file": "assets/trashpediaS-CpnWydVi.css",
+    "src": "resources/css/trashpediaS.css",
+    "isEntry": true
+  },
+  "resources/css/walletS.css": {
+    "file": "assets/walletS-B7JlPU1X.css",
+    "src": "resources/css/walletS.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-T1DpEqax.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
