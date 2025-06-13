@@ -29,7 +29,7 @@
 
   .container {
     display: flex;
-    height: calc(100vh - 50px); /* Full screen minus header height */
+    height: calc(100vh - 50px); 
   }
 
   .sidebar {
@@ -139,15 +139,13 @@
 }
 
 </style>
-
-  </style>
 </head>
 <body>
 
 <div class="header">
   <div><strong>Logo</strong></div>
   <div style="display: flex; align-items: center; gap: 15px;">
-    <a href="#">About Us</a>
+    <a href="{{ route('profile') }}">{{ Auth::user()->name }}</a>
     <a href="{{ route('profile') }}">
       <img src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" alt="Profile" class="profile-image">
     </a>
