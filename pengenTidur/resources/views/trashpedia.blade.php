@@ -27,36 +27,37 @@
   <h2 class="page-title">Trashpedia</h2>
 
   <div class="poster-gallery">
-    <img src="{{ asset('images/poster tes.jpg') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
-    <img src="{{ asset('images/poster tes.jpg') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
-    <img src="{{ asset('images/poster tes.jpg') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
-    <img src="{{ asset('images/poster tes.jpg') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
-    <img src="{{ asset('images/poster tes.jpg') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
+    <img src="{{ asset('images/poster4.png') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
+    <img src="{{ asset('images/poster3.png') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
+    <img src="{{ asset('images/poster1.png') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
+    <img src="{{ asset('images/poster5.png') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
+    <img src="{{ asset('images/poster2.png') }}" alt="Poster 1" style="width: 200px; height: 300px; margin: 20px;">
   </div>
 
   <hr class="divider">
 
   <div class="info-cards">
     <div class="info-card">
-      <img src="{{ asset('images/poster tes.jpg') }}" alt="Banner 1" style="width: 200px; height: 100px; margin: 20px;">
+      <img src="{{ asset('images/poster8.png') }}" alt="Banner 1" style="width: 400px; height: 100px; margin: 20px;">
       <div class="info-text">
-        <h3>Heading</h3>
-        <p class="subheading">Subheading</p>
+        <h3>Selamat Hari Lingkungan Hidup Sedunia</h3>
+        <p class="subheading">Lestari Alamku, Sehat Hidupku</p>
         <p class="body-text">
-          Aku suka bocchi the rock, dan aku suka sekali dengan lagu-lagu yang ada di anime ini. Aku juga suka sekali dengan karakter-karakter yang ada di anime ini. Aku sangat merekomendasikan anime ini kepada kalian semua.
-          Aku juga suka sekali dengan lagu-lagu yang ada di anime ini. Aku sangat merekomendasikan anime ini kepada kalian semua.
+          Dengan menjaga alam melalui hal-hal kecil seperti membuang sampah pada tempatnya,  
+  kita turut serta menyelamatkan bumi untuk kelangsungan hidup yang lebih baik.
         </p>
       </div>
     </div>
 
     <div class="info-card">
-      <img src="{{ asset('images/poster tes.jpg') }}" alt="Banner 1" style="width: 200px; height: 100px; margin: 20px;">
+      <img src="{{ asset('images/poster9.png') }}" alt="Banner 1" style="width: 400px; height: 100px; margin: 20px;">
       <div class="info-text">
-        <h3>Heading</h3>
-        <p class="subheading">Subheading</p>
+        <h3>Jenis-Jenis Sampah</h3>
+        <p class="subheading">Kenali dan Pilah Sampah dengan Bijak</p>
         <p class="body-text">
-          Aku suka bocchi the rock, dan aku suka sekali dengan lagu-lagu yang ada di anime ini. Aku juga suka sekali dengan karakter-karakter yang ada di anime ini. Aku sangat merekomendasikan anime ini kepada kalian semua.
-          Aku juga suka sekali dengan lagu-lagu yang ada di anime ini. Aku sangat merekomendasikan anime ini kepada kalian semua.
+          • <strong>Sampah organik</strong>: Sampah yang dapat terurai dan menjadi kompos.<br>
+          • <strong>Sampah anorganik</strong>: Sampah yang sulit terurai secara alami namun dapat didaur ulang.<br>
+          • <strong>Sampah B3</strong>: Limbah berbahaya yang memerlukan penanganan khusus.
         </p>
       </div>
     </div>
