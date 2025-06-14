@@ -26,8 +26,13 @@
     <div class="wallet-container">
     <div class="wallet-card">
         <div class ="container">
-        <h2>Saldo</h2>
-        <p><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
+            <div class="user">
+                <img src="{{ asset('images/wallet.png') }}" style="width: 60px; height: auto; margin-right: 8px;">
+                <h3>User1</h3>
+            </div>
+            <div class="wallet">
+                <p><strong>Rp {{ number_format($saldo,2,',','.') }}</strong></p>
+            </div>
         </div>
     </div>
     </div>

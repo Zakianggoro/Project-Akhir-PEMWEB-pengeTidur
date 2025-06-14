@@ -41,19 +41,39 @@ body {
 }
 
 .wallet-container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     max-width: 800px;
-    height: 150px;
     margin: 0 auto;
-    background-color: green;
+    background-color: lightgreen;
     border-radius: 8px;
+    gap: 10px
 }
 
 .container {
-    display: flex;
+    display: fixed;
     justify-content: space-between;
-    align-items: center;
+    align-items: start-fixed;
     padding: 20px;
+    flex-direction: column;
+    border: 10px solid #bbb;
+}
+
+.container .user{
+    display: flex;
+    allign-item: start-flex;
+    margin: 15px 0;
+}
+
+.container .wallet{
+    display: flex;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .transfer-button {
@@ -64,6 +84,8 @@ body {
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 20px;
+    max-width: fit-content;
 }
 
 .history-section {
