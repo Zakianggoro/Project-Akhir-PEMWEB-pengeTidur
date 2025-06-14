@@ -56,21 +56,25 @@
       <div class="section">
     <h2>Choose your type of trash</h2>
     <div class="trash-options">
-      <div class="item">
+      <div class="item" style="background-color:#a7e8a3">
         <img src="{{ asset('images/botolplastik.png') }}" width="40" /><br/>
-        Botol Plastik
+          <p>Botol Plastik</p>
+          <small style="color: gray;">Rp3.000/kg</small>
       </div>
-      <div class="item">
+      <div class="item" style="background-color:#a7e8a3">
         <img src="{{ asset('images/minyakjelantah.png') }}" width="40" /><br/>
-        Minyak Jelantah
+        <p>Minyak Jelantah</p>
+        <small style="color: gray;">Rp6.000/L</small>
       </div>
-      <div class="item">
+      <div class="item" style="background-color:#a7e8a3">
         <img src="{{ asset('images/botolkaca.png') }}" width="40" /><br/>
-        Botol Kaca
+        <p>Botol Kaca</p>
+        <small style="color: gray;">Rp5.000/kg</small>
       </div>
-      <div class="item">
+      <div class="item" style="background-color:#a7e8a3">
         <img src="{{ asset('images/koran.png') }}" width="40" /><br/>
-        Koran Bekas
+        <p>Koran Bekas</p>
+        <small style="color: gray;">Rp2.500/kg</small>
       </div>
     </div>
   </div>
@@ -78,6 +82,7 @@
 
 
   <div class="section">
+    <h2>User1, let's take a look</h2>
     <div class="education-cards">
       <img src="{{ asset('images/poster1.png') }}" alt="Edukasi 1"/>
       <img src="{{ asset('images/poster2.png') }}" alt="Edukasi 2"/>
