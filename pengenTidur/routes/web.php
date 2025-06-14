@@ -21,7 +21,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/wallet',[WalletController::class,'view'])->name('wallet');
     Route::get('/profile',[ProfileController::class,'view'])->name('profile');
     Route::get('/transfer',[TransferController::class,'view'])->name('transfer');
-    Route::get('/transferOVO',[TOvoController::class,'view'])->name('transferOVO');
     Route::get('/recycle',[RecycleController::class,'view'])->name('recycle');
     Route::get('/trashpedia',[TrashpediaController::class,'view'])->name('trashpedia');
 });

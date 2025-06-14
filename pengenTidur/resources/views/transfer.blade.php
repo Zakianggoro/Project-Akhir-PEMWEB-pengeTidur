@@ -38,12 +38,13 @@
         <div class="balance-option">
             <a href="#" onclick="togglePopup(); return false;">OVO</a>
         </div>
-        <div class="balance-option">Gopay</div>
+        <div class="balance-option">
+            <a href="#" onclick="togglePopup(); return false;">GOPAY</a>
+        </div>
 </div>
-  <button onclick="togglePopup()" class="open-popup-button">Pilih Bank</button>
 </main>
 
-<!-- 🧾 Slide-Up Popup (Overlay Modal) -->
+<!-- Slide-Up Popup (Overlay Modal) -->
 <div class="popup-overlay" id="popup">
   <div class="popup-content">
     <span class="close-button" onclick="togglePopup()">&times;</span>
@@ -59,7 +60,7 @@
         <div class="send-content">
           <span><strong>OVO</strong></span>
           <div class="recipient-info">
-            Ivaaden Febbs<br />
+            Callista Harnit<br />
             62851****6789
           </div>
         </div>
@@ -82,9 +83,35 @@
             <input type="number" id="nominal" value="0" />
         </div>
         </div>
+      <button class="send-button" >SEND</button>
+      <div class="success-popup" id="successPopup">
+  <div class="success-box">
+    <div class="success-header">
+      <h2 class="success-message">SENT!</h2>
+    </div>
 
+    <div class="success-details">
+      <div class="row">
+        <span class="label">Transfer Date</span>
+        <span id="transferDateTime"></span>
+      </div>
 
-      <button class="send-button">SEND</button>
+      <div class="row">
+        <span class="label">Nominal</span>
+        <span class="booking-id" id="bookingId"></span>
+        <span class="amount">Rp <span id="popupAmount">0</span></span>
+      </div>
+
+      <div class="row">
+        <span class="label">Send to</span>
+        <span class="target-name">OVO</span>
+        <span class="target-info">CALLISTAHARNIT<br />6285157446789</span>
+      </div>
+    </div>
+
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
     </div>
   </div>
 </div>
@@ -108,6 +135,45 @@
     button.classList.add('selected');
     document.getElementById('nominal').value = amount;
   }
+
+  function generateBookingID() {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let id = '';
+  for (let i = 0; i < 8; i++) {
+    id += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return id;
+}
+
+    function showPopup(amount) {
+    // Set date and time
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const date = now.toLocaleDateString('en-GB', options);
+    const time = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+    document.getElementById('transferDateTime').textContent = `${date} ${time}`;
+    document.getElementById('popupAmount').textContent = new Intl.NumberFormat('id-ID').format(amount);
+    document.getElementById('bookingId').textContent = generateBookingID();
+
+    document.getElementById('successPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+    document.getElementById('successPopup').style.display = 'none';
+    }
+
+    // Change send button behavior to show popup
+    const sendBtn = document.querySelector('.send-button');
+    sendBtn.addEventListener('click', () => {
+    const amount = parseInt(document.getElementById('nominal').value);
+    if (!isNaN(amount) && amount > 0) {
+        showPopup(amount);
+    } else {
+        alert('Please select or enter a valid amount');
+    }
+    });
+
 </script>
 
 </body>

@@ -36,7 +36,7 @@
         </div>
     </div>
     </div>
-    <button class="transfer-button">Transfer</button>
+        <button class="transfer-button" onclick="window.location.href='{{ route('transfer') }}'">Transfer</button>
     </div>
 </main>
 
