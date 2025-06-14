@@ -21,6 +21,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/wallet',[WalletController::class,'view'])->name('wallet');
     Route::get('/profile',[ProfileController::class,'view'])->name('profile');
     Route::get('/transfer',[TransferController::class,'view'])->name('transfer');
+<<<<<<< Updated upstream
+=======
+    Route::get('/transferOVO',[TOvoController::class,'view'])->name('transferOvo');
+>>>>>>> Stashed changes
     Route::get('/recycle',[RecycleController::class,'view'])->name('recycle');
     Route::get('/trashpedia',[TrashpediaController::class,'view'])->name('trashpedia');
+    Route::post('/transfer/send', [TransferController::class, 'send'])->name('transfer.send');
+
 });

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Transfer</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   @vite('resources/css/transferS.css')
@@ -75,7 +76,9 @@
         <button class="amount" onclick="selectAmount(this, '50000')">Rp 50.000</button>
         <button class="amount" onclick="selectAmount(this, '100000')">Rp 100.000</button>
         </div>
-
+        <div id="error-message" style="color: red; margin-bottom: 10px; display: none;">
+          Saldo tidak mencukupi.
+        </div>
         <div class="nominal-box">
         <label>Nominal</label>
         <div class="nominal-input">
@@ -96,6 +99,7 @@
         <span id="transferDateTime"></span>
       </div>
 
+<<<<<<< Updated upstream
       <div class="row">
         <span class="label">Nominal</span>
         <span class="booking-id" id="bookingId"></span>
@@ -112,6 +116,10 @@
     <button onclick="closePopup()">Close</button>
   </div>
 </div>
+=======
+      <button class="send-button" onclick="handleSend()">SEND</button>
+
+>>>>>>> Stashed changes
     </div>
   </div>
 </div>
@@ -135,6 +143,7 @@
     button.classList.add('selected');
     document.getElementById('nominal').value = amount;
   }
+<<<<<<< Updated upstream
 
   function generateBookingID() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -174,6 +183,66 @@
     }
     });
 
+=======
+  const saldoSaatIni = @json($saldo);
+
+  function handleSend() {
+    const nominal = parseInt(document.getElementById('nominal').value);
+    const errorMsg = document.getElementById('error-message');
+    errorMsg.style.display = 'none';
+
+    if (isNaN(nominal) || nominal <= 0) {
+      errorMsg.textContent = "Nominal tidak valid.";
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    if (nominal > saldoSaatIni) {
+      errorMsg.textContent = "Saldo tidak mencukupi.";
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    // Kirim data ke server
+    fetch("{{ route('transfer.send') }}", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+  },
+  body: JSON.stringify({
+    tujuan: "Ivaaden Febbs",
+    nominal: nominal
+  })
+})
+.then(async response => {
+  const contentType = response.headers.get("content-type");
+  if (!response.ok) {
+    if (contentType && contentType.includes("application/json")) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Gagal transfer');
+    } else {
+      const errorText = await response.text();
+      throw new Error("Server error: " + errorText.slice(0, 100));
+    }
+  }
+
+  if (contentType && contentType.includes("application/json")) {
+    return response.json();
+  } else {
+    throw new Error("Respon bukan JSON");
+  }
+})
+.then(data => {
+  alert("Transfer berhasil!");
+  window.location.href = "{{ route('wallet') }}";
+})
+.catch(error => {
+  errorMsg.textContent = error.message;
+  errorMsg.style.display = 'block';
+});
+    }
+>>>>>>> Stashed changes
 </script>
 
 </body>
