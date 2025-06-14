@@ -178,42 +178,49 @@
   const items = {};
 
   function renderItems() {
-    const itemList = document.getElementById("item-list-display");
-    itemList.innerHTML = "";
+  const itemList = document.getElementById("item-list-display");
+  itemList.innerHTML = "";
 
-    for (const [name, count] of Object.entries(items)) {
-      if (count > 0) {
-        const div = document.createElement("div");
-        div.className = "item-box";
-        div.textContent = `${name} x${count}`;
-        itemList.appendChild(div);
-      }
+  for (const [name, data] of Object.entries(items)) {
+    if (data.count > 0) {
+      const div = document.createElement("div");
+      div.className = "item-box";
+      const subtotal = data.count * data.harga;
+      div.textContent = `${name} x${data.count} = Rp ${subtotal}`;
+      itemList.appendChild(div);
     }
   }
+}
 
   function setupButtons() {
-    const plusButtons = document.querySelectorAll(".plus");
-    const minusButtons = document.querySelectorAll(".minus");
+  const plusButtons = document.querySelectorAll(".plus");
+  const minusButtons = document.querySelectorAll(".minus");
 
-    plusButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const name = button.parentElement.querySelector("div").textContent;
-        items[name] = (items[name] || 0) + 1;
-        renderItems();
-      });
+  plusButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.nama;
+      const harga = parseInt(button.dataset.harga);
+      if (!items[name]) {
+        items[name] = { count: 0, harga: harga };
+      }
+      items[name].count += 1;
+      renderItems();
     });
+  });
 
-    minusButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const name = button.parentElement.querySelector("div").textContent;
-        if (items[name]) {
-          items[name]--;
-          if (items[name] <= 0) delete items[name];
-          renderItems();
+  minusButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.nama
+      if (items[name]) {
+        items[name].count -= 1;
+        if (items[name].count <= 0) {
+          delete items[name];
         }
-      });
+        renderItems();
+      }
     });
-  }
+  });
+}
 
   document.addEventListener("DOMContentLoaded", setupButtons);
 </script>
@@ -244,31 +251,21 @@
     <!-- Left Trash Picker -->
     <div class="trash-picker">
       <h3>Pick your trash</h3>
+      @foreach($sampahlist as $sampah)
+        <div class="trash-item">
+            <img src="{{ asset('images/'.strtolower(str_replace(' ', '', $sampah->jenis)) .'.png')}}" alt ="{{ $sampah->jenis }}">
+            <div>{{ $sampah->jenis }} (Rp {{ $sampah->hargaSatuan }}/{{ $sampah->satuan }}) </div>
+            <button class="plus" data-nama="{{ $sampah->jenis }}" data-harga="{{ $sampah->hargaSatuan }}">+</button>
+            <button class="minus" data-nama="{{ $sampah->jenis }}" data-harga="{{ $sampah->hargaSatuan }}">−</button>
 
-      <div class="trash-item">
-        <img src="{{ asset('images/botolplastik.png') }}" alt="Botol Plastik">
-        <div>Botol Plastik</div>
-        <button class="plus">+</button>
-        <button class="minus">−</button>
-      </div>
+        </div>
+      @endforeach
 
-      <div class="trash-item">
-        <img src="{{ asset('images/minyakjelantah.png') }}" alt="Minyak Jelatah">
-        <div>Minyak Jelatah</div>
-        <button class="plus">+</button>
-        <button class="minus">−</button>
-      </div>
-
-      <div class="trash-item">
-        <img src="{{ asset('images/botolkaca.png') }}" alt="Botol Kaca">
-        <div>Botol Kaca</div>
-        <button class="plus">+</button>
-        <button class="minus">−</button>
-      </div>
+      
     </div>
 
     <!-- Right Items List -->
-    <div class="item-list">
+  <div class="item-list">
   <h3>Items</h3>
   <div id="item-list-display" class="scrollable-list"></div>
 
