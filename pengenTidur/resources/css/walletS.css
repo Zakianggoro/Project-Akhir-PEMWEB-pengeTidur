@@ -62,7 +62,7 @@ body {
 
 .container .user{
     display: flex;
-    allign-item: start-flex;
+    align-items: start-flex;
     margin: 15px 0;
 }
 

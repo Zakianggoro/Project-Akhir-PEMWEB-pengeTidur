@@ -60,6 +60,13 @@
   text-align: left;
 }
 
+.balance-option a,
+.balance-option a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -135,5 +142,43 @@ body {
 
 .wallet-icon {
     font-size: 2rem;
+}
+
+/* === Modal Overlay === */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #fffaf3;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
 }
 

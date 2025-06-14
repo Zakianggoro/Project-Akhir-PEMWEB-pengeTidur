@@ -13,7 +13,9 @@ export default defineConfig({
                     'resources/css/walletS.css',
                     'resources/css/profileS.css',
                     'resources/css/trashpediaS.css',
-                    'resources/css/transferS.css'],
+                    'resources/css/transferS.css',
+                    'resources/css/transferOVOS.css'
+                ],
             refresh: true,
         }),
         tailwindcss(),

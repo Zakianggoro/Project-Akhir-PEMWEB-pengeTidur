@@ -1,0 +1,158 @@
+body {
+    background-color: transparent; /* Removed solid bg for modal use */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.transfer-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: #fffaf3;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: If you still use this on a full page elsewhere */
+@media (min-width: 480px) {
+    .transfer-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.back-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo-title .logo {
+    height: 24px;
+}
+
+.send-to-box {
+    background-color: #b3ecb3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.send-label {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.send-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.recipient-info {
+    text-align: right;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.change-account {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 0.8rem;
+    color: #333;
+    text-decoration: underline;
+}
+
+.amount-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.amount {
+    flex: 1 1 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.amount:hover {
+    background-color: #eef6ee;
+}
+
+.amount.selected {
+    border: 2px solid #77cc77;
+    background-color: #f5fff5;
+}
+
+.nominal-box {
+    margin-bottom: 20px;
+}
+
+.nominal-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.nominal-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+}
+
+.nominal-input span {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.nominal-input input {
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.send-button {
+    background-color: #c7f3a3;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+    background-color: #b8e893;
+}
+
+/* Add modal-specific responsiveness if needed */
+@media (max-width: 400px) {
+    .amount {
+        flex: 1 1 45%;
+    }
+}
